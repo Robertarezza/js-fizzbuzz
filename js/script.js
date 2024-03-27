@@ -12,11 +12,11 @@ for (let i = 1; i <= 100; i++) {
     let redClass= document.querySelector(".red");
     let text; 
         if ( i % 3 === 0 && i % 5 === 0) {
-           
+            text = redClass;
             text = "Fizz";
             
          } else if ( i % 5 === 0){
-            text = redClass;
+            text = "Buzz";
           
             } else if ( i % 3 === 0) {
                 text = "Fizz Buzz";
