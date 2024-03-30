@@ -4,13 +4,13 @@
 const rowElem = document.querySelector(".row"); // object | null
 console.log(rowElem);
 
-let boxListElem = "";
+//let boxListElem = "";
 
- for (let i = 1; i <= 100; i++) {
+ for (let i = 1; i <= 104; i++) {
     console.log(i);
     
-       let text;
-   let bgClass;
+        let text;
+        let bgClass;
      
        
    if ( i % 3 === 0 && i % 5 === 0) {
@@ -33,15 +33,16 @@ let boxListElem = "";
            }
             
            
-            const boxElem = document.createElement("div"); // object
-            boxElem.innerHTML = text;
-            boxElem.classList.add( "box" );
-            boxElem.classList.add(bgClass);
-            console.log(boxElem);
-            rowElem.append(boxElem);
+            const boxElem = `<div class="box ${bgClass}"> ${text}</div>`; // object
+            rowElem.innerHTML += boxElem;
+            //boxElem.classList.add( "box" );
+            //boxElem.classList.add(bgClass);
+            //console.log(boxElem);
+            //rowElem.append(boxElem);
         
         }
        
+
 
 
 
@@ -81,3 +82,5 @@ let boxListElem = "";
     //   //per inserire l'elemento nell'elemento genitore in pagina 
     //         rowElem.append(boxElem);
     //     }
+
+
